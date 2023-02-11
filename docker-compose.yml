@@ -1,0 +1,10 @@
+services:
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - 80:80
+      - 8000:8000
+    volumes:
+      - ./nginx/html/:/usr/share/nginx/html/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
